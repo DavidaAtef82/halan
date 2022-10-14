@@ -3,7 +3,6 @@
 put the app in your src directory
 make sure you have .env file in the following directorries
 ...\go\src\halan
-...\go\src\halan\test
 ```
 #Run the following commands
  ```
