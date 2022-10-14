@@ -1,0 +1,335 @@
+{
+  "test_cases": [
+    {
+      "id": 1,
+      "body": {},
+      "type_request": "post",
+      "url": "/challenge/problem-1",
+      "expected_code": 400
+    },
+    {
+      "id": 2,
+      "body": {
+        "word": ""
+      },
+      "type_request": "post",
+      "url": "/challenge/problem-1",
+      "expected_code": 400
+    },
+    {
+      "id": 3,
+      "body": {
+        "word": "    "
+      },
+      "type_request": "post",
+      "url": "/challenge/problem-1",
+      "expected_code": 400
+    },
+    {
+      "id": 4,
+      "body": {
+        "word": "t"
+      },
+      "type_request": "post",
+      "url": "/challenge/problem-1",
+      "expected_code": 200
+    },
+    {
+      "id": 5,
+      "body": {
+        "word": "tt"
+      },
+      "type_request": "post",
+      "url": "/challenge/problem-1",
+      "expected_code": 200
+    },
+    {
+      "id": 6,
+      "body": {
+        "word": "tss"
+      },
+      "type_request": "post",
+      "url": "/challenge/problem-1",
+      "expected_code": 400
+    },
+    {
+      "id": 7,
+      "body": {
+        "word": "tsst"
+      },
+      "type_request": "post",
+      "url": "/challenge/problem-1",
+      "expected_code": 200
+    },
+    {
+      "id": 8,
+      "body": {
+        "word": "madam"
+      },
+      "type_request": "post",
+      "url": "/challenge/problem-1",
+      "expected_code": 200
+    },
+    {
+      "id": 9,
+      "body": {
+        "word": "  madam"
+      },
+      "type_request": "post",
+      "url": "/challenge/problem-1",
+      "expected_code": 200
+    },
+    {
+      "id": 10,
+      "body": {
+        "word": "anna"
+      },
+      "type_request": "post",
+      "url": "/challenge/problem-1",
+      "expected_code": 200
+    },
+    {
+      "id": 11,
+      "body": {
+        "word": "apple"
+      },
+      "type_request": "post",
+      "url": "/challenge/problem-1",
+      "expected_code": 400
+    },
+    {
+      "id": 12,
+      "type_request": "post",
+      "url": "/challenge/problem-2",
+      "expected_code": 200
+    },
+    {
+      "id": 13,
+      "body": {
+        "word": "a32bbaxxxxyyyzyx"
+      },
+      "type_request": "post",
+      "url": "/challenge/problem-3/rle",
+      "expected_code": 400
+    },
+    {
+      "id": 14,
+      "body": {
+        "word": "aaaaaaaaaabbbaxxxxyyyzyx"
+      },
+      "type_request": "post",
+      "url": "/challenge/problem-3/rle",
+      "expected_output_in_payload": {
+        "word": "a10b3a1x4y3z1y1x1"
+      },
+      "expected_code": 200
+    },
+    {
+      "id": 15,
+      "body": {
+        "word": "a10b3a1x4y3z1y1x1"
+      },
+      "type_request": "post",
+      "url": "/challenge/problem-3/rld",
+      "expected_output_in_payload": {
+        "word": "aaaaaaaaaabbbaxxxxyyyzyx"
+      },
+      "expected_code": 200
+    },
+    {
+      "id": 16,
+      "body": {
+        "number": 6
+      },
+      "type_request": "post",
+      "url": "/challenge/problem-4",
+      "expected_output_in_payload": {
+        "value": 49
+      },
+      "expected_code": 200
+    },
+    {
+      "id": 17,
+      "body": {
+        "words": [
+          "apples",
+          "oranges",
+          "flowers",
+          "apples"
+        ]
+      },
+      "type_request": "post",
+      "url": "/challenge/problem-5",
+      "expected_output_in_payload": {
+        "words": [
+          "oranges",
+          "flowers"
+        ]
+      },
+      "expected_code": 200
+    },
+    {
+      "id": 18,
+      "body": {
+        "words": [
+          "apples",
+          "apples"
+        ]
+      },
+      "type_request": "post",
+      "url": "/challenge/problem-5",
+      "expected_output_in_payload": {
+        "words": []
+      },
+      "expected_code": 200
+    },
+    {
+      "id": 19,
+      "body": {
+        "numbers_2d": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      "type_request": "post",
+      "url": "/challenge/problem-6",
+      "expected_output_in_payload": {
+        "numbers_2d": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "expected_code": 200
+    },
+    {
+      "id": 20,
+      "body": {
+        "numbers_2d": [
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            5,
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      "type_request": "post",
+      "url": "/challenge/problem-6",
+      "expected_output_in_payload": {
+        "numbers_2d": [
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      "expected_code": 200
+    },
+    {
+      "id": 21,
+      "type_request": "post",
+      "url": "/challenge/problem-7",
+      "expected_code": 200
+    },
+    {
+      "id": 22,
+      "body": {
+        "numbers": [
+          5,
+          17,
+          3,
+          17,
+          4,
+          -1
+        ]
+      },
+      "type_request": "post",
+      "url": "/challenge/problem-8",
+      "expected_output_in_payload": {
+        "index": 3
+      },
+      "expected_code": 200
+    },
+    {
+      "id": 23,
+      "body": {
+        "value": 2,
+        "children": [
+          {
+            "value": 5,
+            "children": [
+              {
+                "value": 5,
+                "children": []
+              },
+              {
+                "value": 5,
+                "children": []
+              },
+              {
+                "value": 5,
+                "children": []
+              }
+            ]
+          },
+          {
+            "value": 5,
+            "children": []
+          },
+          {
+            "value": 5,
+            "children": []
+          },
+          {
+            "value": 5,
+            "children": []
+          },
+          {
+            "value": 5,
+            "children": []
+          },
+          {
+            "value": 5,
+            "children": []
+          }
+        ]
+      },
+      "type_request": "post",
+      "url": "/challenge/problem-9",
+      "expected_output_in_payload": {
+        "value": 47
+      },
+      "expected_code": 200
+    }
+  ]
+}

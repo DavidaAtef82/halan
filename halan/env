@@ -1,0 +1,9 @@
+#app (local , production)
+APP_ENV=local
+APP_PORT_LOCAL=9098
+APP_PORT_PRODUCTION=80
+APP_NAME=halan
+
+MS_HALAN_URI=halan
+
+ENABLE_SWAGGER=1
